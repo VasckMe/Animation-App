@@ -11,18 +11,43 @@
         <!--Indicator-->
         <scene sceneID="feJ-wJ-7mV">
             <objects>
-                <viewController id="Gfj-8p-H7A" sceneMemberID="viewController">
+                <viewController id="Gfj-8p-H7A" customClass="IndicatorViewController" customModule="Animation_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Sg-kk-hx4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7De-pV-Yym">
+                                <rect key="frame" x="66.5" y="403.5" width="281" height="50"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change indicator?">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeIndicator" destination="Gfj-8p-H7A" eventType="touchUpInside" id="Kf8-2q-Bjz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0C-3g-B9B" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="87" y="148" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NAc-di-KFX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7De-pV-Yym" firstAttribute="centerX" secondItem="NAc-di-KFX" secondAttribute="centerX" id="0gN-Ay-cHC"/>
+                            <constraint firstItem="7De-pV-Yym" firstAttribute="centerY" secondItem="NAc-di-KFX" secondAttribute="centerY" id="nAj-cU-IYZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Indicator" image="circle.grid.cross.fill" catalog="system" id="P19-p8-3aY"/>
+                    <connections>
+                        <outlet property="randomIndicator" destination="o0C-3g-B9B" id="OLr-10-MLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLs-DX-cth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="134"/>
+            <point key="canvasLocation" x="92.753623188405811" y="133.92857142857142"/>
         </scene>
         <!--Animation-->
         <scene sceneID="dkB-wL-EaY">
