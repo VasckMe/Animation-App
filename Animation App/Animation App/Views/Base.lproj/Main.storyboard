@@ -8,6 +8,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--?-->
+        <scene sceneID="1DU-ef-O9R">
+            <objects>
+                <viewController id="UPu-OK-H1n" customClass="HistoryViewController" customModule="Animation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBO-xC-6Ja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-45-U8E" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="54.5" y="403.5" width="305" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="History of 2 squares">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="historyActions:" destination="UPu-OK-H1n" eventType="touchUpInside" id="tXZ-hd-cy3"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NF7-aY-u78" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="87" y="92" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pkq-xD-3BX" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="314" y="711" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-nF-48a">
+                                <rect key="frame" x="147" y="392.5" width="120.5" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bgd-0k-j7L"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DTh-45-U8E" firstAttribute="centerX" secondItem="bgd-0k-j7L" secondAttribute="centerX" id="KpG-Ck-ndE"/>
+                            <constraint firstItem="DTh-45-U8E" firstAttribute="centerY" secondItem="bgd-0k-j7L" secondAttribute="centerY" id="SQJ-zp-c0i"/>
+                            <constraint firstItem="Sfv-nF-48a" firstAttribute="centerX" secondItem="bgd-0k-j7L" secondAttribute="centerX" id="kZg-2s-1S2"/>
+                            <constraint firstItem="Sfv-nF-48a" firstAttribute="centerY" secondItem="bgd-0k-j7L" secondAttribute="centerY" id="p0Q-4w-M4g"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="?" selectedImage="questionmark.app" catalog="system" id="1kv-5w-nZS"/>
+                    <connections>
+                        <outlet property="endLabel" destination="Sfv-nF-48a" id="mKk-Ny-N9D"/>
+                        <outlet property="orangeView" destination="Pkq-xD-3BX" id="b1v-XN-WbM"/>
+                        <outlet property="pinkView" destination="NF7-aY-u78" id="AQh-Qn-wa4"/>
+                        <outlet property="startButton" destination="DTh-45-U8E" id="Sim-xH-ump"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lc-pt-oX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.304347826087" y="227.67857142857142"/>
+        </scene>
         <!--Indicator-->
         <scene sceneID="feJ-wJ-7mV">
             <objects>
@@ -47,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLs-DX-cth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="133.92857142857142"/>
+            <point key="canvasLocation" x="107" y="-172"/>
         </scene>
         <!--Animation-->
         <scene sceneID="dkB-wL-EaY">
@@ -137,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIa-VE-aAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="-520.3125"/>
+            <point key="canvasLocation" x="-590" y="-520"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qUU-UP-RS1">
@@ -151,16 +207,18 @@
                     <connections>
                         <segue destination="W1d-Ze-Hdm" kind="relationship" relationship="viewControllers" id="kGO-ed-vLV"/>
                         <segue destination="Gfj-8p-H7A" kind="relationship" relationship="viewControllers" id="ED3-Qu-hIY"/>
+                        <segue destination="UPu-OK-H1n" kind="relationship" relationship="viewControllers" id="wNk-Fw-aUa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItA-xy-ZzN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-797" y="-168"/>
+            <point key="canvasLocation" x="-1455" y="-172"/>
         </scene>
     </scenes>
     <resources>
         <image name="circle.grid.cross.fill" catalog="system" width="128" height="125"/>
         <image name="pencil.slash" catalog="system" width="128" height="113"/>
+        <image name="questionmark.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -169,6 +227,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
