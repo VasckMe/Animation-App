@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5EC-Ob-f8F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--?-->
+        <scene sceneID="1DU-ef-O9R">
+            <objects>
+                <viewController id="UPu-OK-H1n" customClass="HistoryViewController" customModule="Animation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBO-xC-6Ja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-45-U8E" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="54.5" y="403.5" width="305" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="History of 2 squares">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="historyActions:" destination="UPu-OK-H1n" eventType="touchUpInside" id="tXZ-hd-cy3"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NF7-aY-u78" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="87" y="92" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pkq-xD-3BX" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="314" y="711" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-nF-48a">
+                                <rect key="frame" x="147" y="392.5" width="120.5" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bgd-0k-j7L"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DTh-45-U8E" firstAttribute="centerX" secondItem="bgd-0k-j7L" secondAttribute="centerX" id="KpG-Ck-ndE"/>
+                            <constraint firstItem="DTh-45-U8E" firstAttribute="centerY" secondItem="bgd-0k-j7L" secondAttribute="centerY" id="SQJ-zp-c0i"/>
+                            <constraint firstItem="Sfv-nF-48a" firstAttribute="centerX" secondItem="bgd-0k-j7L" secondAttribute="centerX" id="kZg-2s-1S2"/>
+                            <constraint firstItem="Sfv-nF-48a" firstAttribute="centerY" secondItem="bgd-0k-j7L" secondAttribute="centerY" id="p0Q-4w-M4g"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="?" selectedImage="questionmark.app" catalog="system" id="1kv-5w-nZS"/>
+                    <connections>
+                        <outlet property="endLabel" destination="Sfv-nF-48a" id="mKk-Ny-N9D"/>
+                        <outlet property="orangeView" destination="Pkq-xD-3BX" id="b1v-XN-WbM"/>
+                        <outlet property="pinkView" destination="NF7-aY-u78" id="AQh-Qn-wa4"/>
+                        <outlet property="startButton" destination="DTh-45-U8E" id="Sim-xH-ump"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lc-pt-oX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.304347826087" y="227.67857142857142"/>
+        </scene>
+        <!--Indicator-->
+        <scene sceneID="feJ-wJ-7mV">
+            <objects>
+                <viewController id="Gfj-8p-H7A" customClass="IndicatorViewController" customModule="Animation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Sg-kk-hx4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7De-pV-Yym">
+                                <rect key="frame" x="66.5" y="403.5" width="281" height="50"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change indicator?">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeIndicator" destination="Gfj-8p-H7A" eventType="touchUpInside" id="Kf8-2q-Bjz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0C-3g-B9B" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="87" y="148" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NAc-di-KFX"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7De-pV-Yym" firstAttribute="centerX" secondItem="NAc-di-KFX" secondAttribute="centerX" id="0gN-Ay-cHC"/>
+                            <constraint firstItem="7De-pV-Yym" firstAttribute="centerY" secondItem="NAc-di-KFX" secondAttribute="centerY" id="nAj-cU-IYZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Indicator" image="circle.grid.cross.fill" catalog="system" id="P19-p8-3aY"/>
+                    <connections>
+                        <outlet property="randomIndicator" destination="o0C-3g-B9B" id="OLr-10-MLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLs-DX-cth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="-172"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="dkB-wL-EaY">
+            <objects>
+                <viewController id="W1d-Ze-Hdm" customClass="AnimationViewController" customModule="Animation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3a-7u-eEd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwN-2U-Udf">
+                                <rect key="frame" x="87.5" y="483" width="239.5" height="282"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start animation">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonAction" destination="W1d-Ze-Hdm" eventType="touchUpInside" id="Yi2-Nl-eCj"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-ga-YMv">
+                                <rect key="frame" x="25" y="94" width="364" height="364"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0xh-AV-xa2">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="178"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-AS-58L" customClass="SpringView" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="178"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WuE-AS-58L" secondAttribute="height" multiplier="1:1" id="4b5-hc-dxf"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nD5-lP-AQ9" customClass="SpringView" customModule="Spring">
+                                                <rect key="frame" x="186" y="0.0" width="178" height="178"/>
+                                                <color key="backgroundColor" red="0.4988286495" green="0.75975400209999999" blue="0.0039863092820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nD5-lP-AQ9" secondAttribute="height" multiplier="1:1" id="oXk-Xs-tfl"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WuE-AS-58L" firstAttribute="height" secondItem="nD5-lP-AQ9" secondAttribute="height" id="n9p-Jx-s5R"/>
+                                            <constraint firstItem="WuE-AS-58L" firstAttribute="width" secondItem="nD5-lP-AQ9" secondAttribute="width" id="xLH-Ia-MpW"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WSb-vh-ofM">
+                                        <rect key="frame" x="0.0" y="186" width="364" height="178"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucJ-Xo-o3L" customClass="SpringView" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="178"/>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ucJ-Xo-o3L" secondAttribute="height" multiplier="1:1" id="OQD-5D-rE6"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AP-8E-Xun" customClass="SpringView" customModule="Spring">
+                                                <rect key="frame" x="186" y="0.0" width="178" height="178"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9AP-8E-Xun" secondAttribute="height" multiplier="1:1" id="HWZ-z4-0xL"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gvT-P0-EoX"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8GW-ga-YMv" firstAttribute="leading" secondItem="gvT-P0-EoX" secondAttribute="leading" constant="25" id="2zb-x5-3An"/>
+                            <constraint firstItem="8GW-ga-YMv" firstAttribute="top" secondItem="gvT-P0-EoX" secondAttribute="top" constant="50" id="8Dw-9S-PaS"/>
+                            <constraint firstItem="gvT-P0-EoX" firstAttribute="bottom" secondItem="rwN-2U-Udf" secondAttribute="bottom" constant="48" id="DNq-ku-fTl"/>
+                            <constraint firstItem="rwN-2U-Udf" firstAttribute="top" secondItem="8GW-ga-YMv" secondAttribute="bottom" constant="25" id="E6t-n0-5C9"/>
+                            <constraint firstItem="gvT-P0-EoX" firstAttribute="trailing" secondItem="8GW-ga-YMv" secondAttribute="trailing" constant="25" id="TAA-X9-aD0"/>
+                            <constraint firstItem="rwN-2U-Udf" firstAttribute="centerX" secondItem="gvT-P0-EoX" secondAttribute="centerX" id="XAm-Ep-GFq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animation" image="pencil.slash" catalog="system" id="jPr-tJ-DNo"/>
+                    <connections>
+                        <outletCollection property="viewCollection" destination="ucJ-Xo-o3L" collectionClass="NSMutableArray" id="27f-rQ-FMb"/>
+                        <outletCollection property="viewCollection" destination="WuE-AS-58L" collectionClass="NSMutableArray" id="qMN-TE-wS0"/>
+                        <outletCollection property="viewCollection" destination="nD5-lP-AQ9" collectionClass="NSMutableArray" id="vxq-vy-lel"/>
+                        <outletCollection property="viewCollection" destination="9AP-8E-Xun" collectionClass="NSMutableArray" id="A52-ct-laK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIa-VE-aAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="-520"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qUU-UP-RS1">
+            <objects>
+                <tabBarController id="5EC-Ob-f8F" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VqP-E0-iYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="W1d-Ze-Hdm" kind="relationship" relationship="viewControllers" id="kGO-ed-vLV"/>
+                        <segue destination="Gfj-8p-H7A" kind="relationship" relationship="viewControllers" id="ED3-Qu-hIY"/>
+                        <segue destination="UPu-OK-H1n" kind="relationship" relationship="viewControllers" id="wNk-Fw-aUa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItA-xy-ZzN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1455" y="-172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle.grid.cross.fill" catalog="system" width="128" height="125"/>
+        <image name="pencil.slash" catalog="system" width="128" height="113"/>
+        <image name="questionmark.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
